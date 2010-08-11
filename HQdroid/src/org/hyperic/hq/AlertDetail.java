@@ -263,7 +263,7 @@ public class AlertDetail extends Activity {
 	    			if (!alert.isFixed()){
 	    				
 		    			//show ack
-		    			Log.v(CLASSTAG,"InEsc="+alert.isInEsc()+" AckedBy="+alert.getAckedBy()+" mostRecent"+mostRecent);
+		    			Log.v(CLASSTAG,"InEsc="+alert.isInEsc()+" AckedBy="+alert.getAckedBy()+" mostRecent="+mostRecent);
 		    			if (alert.isInEsc() &&  "".equals(alert.getAckedBy()) && mostRecent){
 		    				ackedBtn.setVisibility(View.VISIBLE);
 		    			}else{

@@ -30,13 +30,27 @@ public class Login extends Activity {
 	private String username ="";
 	private String password ="";
 	private static String API_PATH = "/hqu/hqapi1/alert/get.hqu?id=0";//TODO is there any better way to check if login success?
-    
+	SharedPreferences loginPref;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.v(CLASSTAG, "in onCreate()");
         setContentView(R.layout.login);
         findViews();
+        loadPref();
+        
         setListeners();//for the two button
+    }
+    private void loadPref(){
+        loginPref = getSharedPreferences("loginData", MODE_PRIVATE);
+        
+        url = loginPref.getString("url", getString(R.string.login_url_default));
+        username = loginPref.getString("username", getString(R.string.login_username_default));
+
+        urlTxt.setText(url);
+        usernameTxt.setText(username);
+        
     }
     
     
@@ -76,7 +90,7 @@ public class Login extends Activity {
     		String bundleResult = msg.getData().getString("RESPONSE");
     		Log.v(CLASSTAG, "get RESPONSE: "+bundleResult);
     		
-    		
+    		//Another RESPONSE: Error - Socket is not connected
     		if (bundleResult.contains("Error - Target host must not be null, or set in parameters.")
     				|| bundleResult.contains("Error - Host is unresolved")){
     			passwordTxt.setText("");
@@ -88,7 +102,7 @@ public class Login extends Activity {
 
     		}else if  (bundleResult.contains("<AlertResponse")){
     			// save to preference
-    	        SharedPreferences loginPref = getSharedPreferences("loginData", MODE_PRIVATE);			
+    	        loginPref = getSharedPreferences("loginData", MODE_PRIVATE);			
     	        SharedPreferences.Editor editor = loginPref.edit();
     	        editor.clear();
     	        editor.putString("url", url);

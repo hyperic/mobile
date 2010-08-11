@@ -27,11 +27,13 @@ public class Main extends TabActivity {
 	private String username ="";
 	private String password ="";
 	SharedPreferences loginPref;
+	TabHost tabHost;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.v(CLASSTAG, "in onCreate()");
+        tabHost = getTabHost();
     }
     
     @Override
@@ -55,13 +57,21 @@ public class Main extends TabActivity {
     }
     
 
-    private void addTab(){
-        TabHost tabHost = getTabHost();
+    private void showTabs(){
+    	Log.v(CLASSTAG, "in showTabs()");
+    	
+        int tabCount = tabHost.getTabWidget().getChildCount();
+		Log.v(CLASSTAG, "showTabs()- tab number:"+String.valueOf(tabCount));
+        if(tabCount>0) {
+        	Log.v(CLASSTAG, "in showTabs()- already has tabs.");
+        	return;
+        }
+        
         TabHost.TabSpec spec;
         Intent intent;
         Resources res = getResources();
-        tabHost.clearAllTabs();
         
+        Log.v(CLASSTAG, "showTabs()- add the urgent alert list");
         intent = new Intent(this,UrgentAlertList.class);
         spec = tabHost.newTabSpec("infixedAlerts").setIndicator(getString(R.string.main_tab_urgent_alert),
         		res.getDrawable(R.drawable.icon_alert)).setContent(intent);
@@ -80,15 +90,14 @@ public class Main extends TabActivity {
     	if (requestCode == LOGIN_REQUEST){
             if (resultCode == RESULT_OK){
             	//from login page
-                addTab();
+                showTabs();
             } else{
                 tryLogin();
             }
     	}
     }
-
     
-    private final void tryLogin() {                
+    private void tryLogin() {                
 		final ResponseHandler<String> responseHandler = 
 			HTTPRequestHelper.getResponseHandlerInstance(this.handler);
 		HTTPRequestHelper helper = new HTTPRequestHelper(responseHandler);
@@ -102,14 +111,16 @@ public class Main extends TabActivity {
     	@Override
     	public void handleMessage(final Message msg){
     		String bundleResult = msg.getData().getString("RESPONSE");
-    		Log.v(CLASSTAG, "get RESPONSE: "+bundleResult);
+    		Log.v(CLASSTAG, "in handler- get RESPONSE: "+bundleResult);
     		
     		//if can connect and get the data
     		if (!bundleResult.contains("AlertResponse")){
+    			Log.v(CLASSTAG, "in handler- to Login");
     			toLogin();
     			
     		}else{
-    			addTab();
+    			Log.v(CLASSTAG, "in handler- show Tabs");
+    			showTabs();
     		}
     	}
     };
