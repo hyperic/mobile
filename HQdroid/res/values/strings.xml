@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_username_default"></string>
+    <string name="login_url_default"></string>
+    <string name="login_password_default"></string>
+    	
+    <string name="app_name">HQdroid</string>
+    <string name="login_title">Login to your HQ server</string>
+    <string name="login_username">User name:</string>
+	<string name="login_url">HQ server:</string>
+	<string name="login_password">Password:</string>
+
+	<string name="hq_name">Hyperic HQ</string>
+	<string name="login_login">Login</string>
+	<string name="login_reset">Reset</string>
+	
+	<string name="login_error_empty">Please enter all the information</string>
+	<string name="login_error_server">Not able to connect to the Hyperic server</string>
+	<string name="login_error_login">You have entered an invalid username and/or password.</string>
+	<string name="login_error_general">Not able to login. (It may due to network connection problem.) Please try again.</string>
+	<string name="login_error_url">The url format is invalid.</string>
+
+	<string name="main_tab_alert">All Alerts</string>
+	<string name="main_tab_urgent_alert">Urgent Alerts</string>
+	
+	<string name="alerts_no_item">No recent alerts.</string>
+	<string name="alerts_please_wait">Please wait... </string>
+	<string name="alerts_retrieving_data">Retrieving data... </string>
+	
+	<string name="menu_logout">Log out</string>
+	<string name="menu_refresh">Refresh</string>
+	<string name="menu_preference">Settings</string>
+	
+    <string name="alert_detail_title">Alert Detail</string>	
+	<string name="alert_detail_name">Alert Name:</string>
+	<string name="alert_detail_time">Alert Time:</string>
+	<string name="alert_detail_resource">Resource:</string>
+	<string name="alert_detail_reason">Reason for Alerting:</string>
+	<string name="alert_detail_esc_action_logs">Escalation Action Logs:</string>
+	<string name="alert_detail_fix_resolution">Resolution For Fix:</string>	
+	<string name="alert_detail_fixed">Fixed</string>
+	<string name="alert_detail_acked">Acknowledged</string>	
+	<string name="alert_detail_back">Go back to alert list</string>			
+
+	<string name="preference_title">HQdroid Preference</string>		
+	<string name="preference_general_title">General Settings</string>		
+	<string name="preference_urgent_alert_tab_title">Settings for Urgent Alert Tab</string>
+	<string name="preference_alert_counts_title">Alerts Per Page</string>
+	<string name="preference_alert_counts_summary">The maximum numbers of alerts loaded from server.</string>
+	<string name="preference_page_refresh_time_title">Page Refresh Frequency</string>
+	<string name="preference_page_refresh_time_summary">The time interval for refresh pages. It only refreshs the current page.</string>
+	<string name="preference_notification_refresh_time_title">Notification Frequency</string>
+	<string name="preference_notification_refresh_time_summary">The time interval for checking for new alerts from server. However, the frequency for checking for new alerts when you are currently in HQdroid page is depends on the "Page Refresh Frequency" setting.</string>
+	<string name="preference_notification_title">Notification Settings</string>
+	<string name="preference_notification_new_title">Notification</string>
+	<string name="preference_notification_new_summary_on">Uncheck to turn off the new alert notification.</string>
+	<string name="preference_notification_new_summary_off">Check to turn on the new alert notification.</string>	
+
+	<string name="notification_new_alert_bar">New Alert!</string>
+	<string name="notification_new_alert">New Alert!</string>
+	<string name="notification_new_alert_detail">Received new unfixed alert.</string>
+		
+	
+</resources>

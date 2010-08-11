@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- put ScrollView outside to support scroll -->
+
+<ScrollView 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+
+
+<LinearLayout
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+
+<TextView 
+	android:text="@string/login_title" 
+	style="@style/login_titl"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content">
+	</TextView>
+<TextView 
+	android:id="@+id/errorMsgLbl" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content">
+	</TextView>
+<TextView 
+	android:text="@string/login_url" 
+	style="@style/login_label"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"></TextView>
+<EditText android:text="@string/login_url_default" 
+	android:id="@+id/urlTxt" 
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"></EditText>
+
+<TextView 
+	android:text="@string/login_username" 
+	style="@style/login_label"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"></TextView>
+	
+<EditText 
+	android:text="@string/login_username_default" 
+	android:id="@+id/usernameTxt" 
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"></EditText>
+	
+<TextView 
+	style="@style/login_label"
+	android:text="@string/login_password" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"></TextView>
+	
+<EditText 
+	android:text="@string/login_password_default" 
+	android:id="@+id/passwordTxt" 
+	android:layout_width="fill_parent" 
+	android:password="true"
+	android:layout_height="wrap_content"></EditText>
+
+<LinearLayout
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">	
+	
+	<Button 
+		android:text="@string/login_reset" 
+		android:id="@+id/resetBtn" 
+		android:layout_weight="3"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"></Button>
+	<Button 
+		android:text="@string/login_login" 
+		android:id="@+id/loginBtn" 
+		android:layout_weight="3"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"></Button>
+
+
+	</LinearLayout>
+
+
+</LinearLayout>
+
+</ScrollView>

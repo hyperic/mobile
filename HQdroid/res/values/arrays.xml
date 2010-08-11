@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+		<!-- page refresh time, unit is second -->
+	<string-array name="preference_page_refresh_entries">
+		<item>5 Seconds</item>
+		<item>10 Seconds</item>
+		<item>30 Seconds</item>
+		<item>1 Minute</item>
+		<item>2 Minutes</item>
+		<item>5 Minutes</item>
+		<item>10 Minutes</item>
+		<item>2 Hours</item>
+	</string-array>
+
+	<!-- page refresh time -->
+	<string-array name="preference_page_refresh_entryvalues">
+		<item>5000</item>
+		<item>10000</item>
+		<item>30000</item>
+		<item>60000</item>
+		<item>120000</item>
+		<item>300000</item>
+		<item>600000</item>
+		<item>7200000</item>
+	</string-array>
+	
+	
+	<!-- number per page -->
+	<string-array name="preference_alert_counts_entries">
+		<item>10 Alerts</item>
+		<item>20 Alerts</item>
+		<item>30 Alerts</item>
+		<item>40 Alerts</item>
+		<item>50 Alerts</item>
+		<item>100 Alerts</item>
+		<item>200 Alerts</item>
+		<item>500 Alerts</item>
+	</string-array>
+
+	<!-- number per page -->
+	<string-array name="preference_alert_counts_entryvalues">
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+		<item>40</item>
+		<item>50</item>
+		<item>100</item>
+		<item>200</item>
+		<item>500</item>
+	</string-array>	
+
+		<!-- page refresh time, unit is second -->
+	<string-array name="preference_notification_refresh_entries">
+		<item>2 Minutes</item>
+		<item>5 Minutes</item>
+		<item>10 Minutes</item>
+		<item>15 Minutes</item>
+		<item>20 Minutes</item>
+		<item>30 Minutes</item>
+		<item>1 Hour</item>
+		<item>2 Hours</item>
+	</string-array>
+
+	<!-- page refresh time -->
+	<string-array name="preference_notification_refresh_entryvalues">
+		<item>120000</item>
+		<item>300000</item>
+		<item>600000</item>
+		<item>900000</item>
+		<item>1200000</item>
+		<item>1800000</item>
+		<item>3600000</item>
+		<item>7200000</item>
+	</string-array>
+	
+</resources>

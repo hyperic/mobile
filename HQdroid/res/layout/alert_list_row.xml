@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="?android:attr/listPreferredItemHeight"
+  android:padding="6dip">
+  
+
+	
+	<!-- display data -->  		  
+	<ImageView
+		android:id="@+id/alert_icon"
+	  	android:layout_width="wrap_content"
+	  	android:layout_height="fill_parent"
+  		android:layout_marginRight="6dip"
+		android:src="@drawable/icon_available_green" />
+	<LinearLayout
+		android:layout_width="wrap_content"
+	  	android:layout_height="fill_parent">
+	  	<TextView
+	  		android:id="@+id/alert_ctime_view" 
+	  		android:text="12:05 07/25"
+	  		android:layout_width="40dp"
+	  		android:layout_height="fill_parent"
+	  		android:layout_marginRight="10dip" />
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_weight="1"
+			android:layout_width="fill_parent"
+		  	android:layout_height="fill_parent">	  		
+			<TextView
+		  		android:id="@+id/alert_name_view" 
+		  		android:text="this is name"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+	  			android:singleLine="true"
+	  			android:layout_weight="1"
+				/>
+			<TextView
+		  		android:id="@+id/alert_resource_view" 
+		  		android:text="this is resource"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:singleLine="true"
+				android:layout_weight="1"
+				/>
+		</LinearLayout>
+	</LinearLayout>
+	 
+	 <!-- to hide message of action log and escalation state -->
+	 <TextView
+		android:id="@+id/hidden_msg_view" 
+		android:layout_width="0dp"
+		android:layout_height="fill_parent"
+	 	android:visibility="invisible"/>		
+
+</LinearLayout>
